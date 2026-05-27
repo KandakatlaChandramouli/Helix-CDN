@@ -39,7 +39,10 @@ func (m *Manager) Remove(
 	m.mu.Lock()
 	defer m.mu.Unlock()
 
-	delete(m.clients, id)
+	delete(
+		m.clients,
+		id,
+	)
 }
 
 func (m *Manager) Count() int {
@@ -47,4 +50,15 @@ func (m *Manager) Count() int {
 	defer m.mu.RUnlock()
 
 	return len(m.clients)
+}
+
+func (m *Manager) Range(
+	fn func(*Client),
+) {
+	m.mu.RLock()
+	defer m.mu.RUnlock()
+
+	for _, client := range m.clients {
+		fn(client)
+	}
 }

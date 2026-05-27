@@ -1,9 +1,13 @@
 package reactor
 
-type Reactor struct{}
-
-func New() *Reactor {
-	return &Reactor{}
+type Reactor struct {
+	ID int
 }
 
-func (r *Reactor) Run() {}
+func New(
+	id int,
+) *Reactor {
+	return &Reactor{
+		ID: id,
+	}
+}

@@ -10,6 +10,7 @@ type Node struct {
 }
 
 func New() *Node {
+
 	buf := make([]byte, 16)
 
 	_, _ = rand.Read(buf)

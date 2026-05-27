@@ -1,10 +1,6 @@
 package opcode
 
 const (
-	OpPing uint16 = iota + 1
-	OpPong
-	OpSubscribe
-	OpUnsubscribe
-	OpBroadcast
-	OpReplay
+	Ping byte = 1
+	Broadcast byte = 2
 )

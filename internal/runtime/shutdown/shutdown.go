@@ -9,6 +9,7 @@ import (
 func Wait(
 	fn func(),
 ) {
+
 	ch := make(chan os.Signal, 1)
 
 	signal.Notify(

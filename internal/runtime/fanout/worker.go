@@ -11,7 +11,7 @@ type Worker struct {
 	handled atomic.Uint64
 }
 
-func New() *Worker {
+func NewWorker() *Worker {
 	return &Worker{
 		queue: queue.New(),
 	}

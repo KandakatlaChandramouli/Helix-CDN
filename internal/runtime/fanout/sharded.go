@@ -19,7 +19,7 @@ func NewSharded() *Sharded {
 	}
 
 	for i := 0; i < n; i++ {
-		s.workers[i] = New()
+		s.workers[i] = NewWorker()
 
 		go s.workers[i].Run()
 	}
