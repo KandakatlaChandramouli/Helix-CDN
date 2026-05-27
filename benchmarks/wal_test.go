@@ -4,16 +4,13 @@ import (
 	"os"
 	"testing"
 
-	"helixcdn/internal/storage/mmap"
+	"helixcdn/internal/storage/wal"
 )
 
-func BenchmarkMmapAppend(b *testing.B) {
-	file := "bench.db"
+func BenchmarkWalAppend(b *testing.B) {
+	file := "bench.wal"
 
-	engine, err := mmap.Open(
-		file,
-		64*1024*1024,
-	)
+	writer, err := wal.Open(file)
 
 	if err != nil {
 		b.Fatal(err)
@@ -21,7 +18,7 @@ func BenchmarkMmapAppend(b *testing.B) {
 
 	defer os.Remove(file)
 
-	defer engine.Close()
+	defer writer.Close()
 
 	payload := make([]byte, 1024)
 
@@ -30,9 +27,7 @@ func BenchmarkMmapAppend(b *testing.B) {
 	b.ReportAllocs()
 
 	for i := 0; i < b.N; i++ {
-		_, err := engine.Append(payload)
-
-		if err != nil {
+		if err := writer.Append(payload); err != nil {
 			b.Fatal(err)
 		}
 	}
