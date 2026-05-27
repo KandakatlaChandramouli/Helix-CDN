@@ -1,7 +1,7 @@
 package eventloop
 
 type Loop struct {
-	ID int
+	ID   int
 	Load uint64
 }
 

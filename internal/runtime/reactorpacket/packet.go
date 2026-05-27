@@ -1,6 +1,6 @@
 package reactorpacket
 
 type Packet struct {
-	Opcode byte
+	Opcode  byte
 	Payload []byte
 }

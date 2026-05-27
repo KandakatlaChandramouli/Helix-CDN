@@ -1,0 +1,17 @@
+{
+  "title": "Helix Runtime",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Connections"
+    },
+    {
+      "type": "graph",
+      "title": "Messages"
+    },
+    {
+      "type": "graph",
+      "title": "Broadcasts"
+    }
+  ]
+}

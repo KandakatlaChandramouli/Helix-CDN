@@ -19,7 +19,7 @@ func BenchmarkShardMap(
 	for i := 0; i < b.N; i++ {
 
 		sm.Append(
-			uint64(i % 128),
+			uint64(i%128),
 			payload,
 		)
 	}

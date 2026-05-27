@@ -36,7 +36,7 @@ func Decode(
 
 	return packet.Packet{
 		Version: buf[0],
-		Opcode: buf[1],
+		Opcode:  buf[1],
 		Payload: buf[6 : 6+length],
 	}, nil
 }

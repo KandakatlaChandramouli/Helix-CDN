@@ -1,6 +1,6 @@
 package packet
 
 type Packet struct {
-	Opcode byte
+	Opcode  byte
 	Payload []byte
 }

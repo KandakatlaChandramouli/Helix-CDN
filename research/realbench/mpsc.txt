@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/corequeue
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkMPSCQueue-4        	20147785	        72.34 ns/op	      16 B/op	       1 allocs/op
+BenchmarkMPSCContention-4   	 2263567	       509.1 ns/op	     128 B/op	       8 allocs/op
+PASS
+ok  	helixcdn/benchmarks/corequeue	3.273s

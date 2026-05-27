@@ -1,0 +1,107 @@
+File: benchmarks.test
+Build ID: 212c760e9acdb1b60cf63ff805643a90fd654525
+Type: cpu
+Time: 2026-05-27 09:18:31 UTC
+Duration: 12.80s, Total samples = 13.93s (108.85%)
+Showing nodes accounting for 12.91s, 92.68% of 13.93s total
+Dropped 152 nodes (cum <= 0.07s)
+      flat  flat%   sum%        cum   cum%
+     1.48s 10.62% 10.62%      1.56s 11.20%  helixcdn/internal/edge/ring.(*Ring).Push (inline)
+     1.37s  9.83% 20.46%      1.37s  9.83%  time.runtimeNow
+     1.04s  7.47% 27.93%      1.60s 11.49%  internal/sync.(*HashTrieMap[go.shape.interface {},go.shape.interface {}]).Swap
+     0.91s  6.53% 34.46%      0.91s  6.53%  internal/sync.(*Mutex).Lock (inline)
+     0.59s  4.24% 38.69%      0.59s  4.24%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     0.56s  4.02% 42.71%      0.56s  4.02%  runtime.spanClass.sizeclass (inline)
+     0.51s  3.66% 46.37%      0.51s  3.66%  runtime.memmove
+     0.51s  3.66% 50.04%      1.23s  8.83%  runtime.tryDeferToSpanScan
+     0.49s  3.52% 53.55%      0.91s  6.53%  runtime.scanObjectSmall
+     0.44s  3.16% 56.71%      1.11s  7.97%  runtime.scanObjectsSmall
+     0.44s  3.16% 59.87%      0.75s  5.38%  sync.(*Pool).Get
+     0.43s  3.09% 62.96%      0.86s  6.17%  helixcdn/benchmarks.BenchmarkFrameDecode
+     0.43s  3.09% 66.04%      0.43s  3.09%  helixcdn/internal/edge/frame.Decode (inline)
+     0.37s  2.66% 68.70%      0.74s  5.31%  sync.(*Pool).Put
+     0.25s  1.79% 70.50%      0.37s  2.66%  sync.runtime_procPin
+     0.22s  1.58% 72.07%      0.22s  1.58%  runtime.extractHeapBitsSmall
+     0.20s  1.44% 73.51%      0.20s  1.44%  internal/sync.(*Mutex).Unlock (inline)
+     0.19s  1.36% 74.87%      1.75s 12.56%  helixcdn/benchmarks.BenchmarkRingPush
+     0.19s  1.36% 76.24%      0.24s  1.72%  sync/atomic.StorePointer
+     0.18s  1.29% 77.53%      1.51s 10.84%  helixcdn/internal/storage/mmap.(*Engine).Append
+     0.16s  1.15% 78.68%      0.16s  1.15%  internal/runtime/syscall/linux.Syscall6
+     0.15s  1.08% 79.76%      0.58s  4.16%  sync.(*Pool).pin
+     0.15s  1.08% 80.83%      0.15s  1.08%  time.Duration.Seconds (inline)
+     0.12s  0.86% 81.69%      0.12s  0.86%  runtime.memequal64
+     0.12s  0.86% 82.56%      0.12s  0.86%  runtime.procPin (inline)
+     0.12s  0.86% 83.42%      0.12s  0.86%  sync/atomic.SwapPointer
+     0.11s  0.79% 84.21%      0.62s  4.45%  helixcdn/internal/runtime/queue.(*MPSC).Push
+     0.10s  0.72% 84.92%      0.42s  3.02%  helixcdn/internal/runtime/queue.(*MPSC).Pop
+     0.10s  0.72% 85.64%      0.10s  0.72%  sync.runtime_procUnpin
+     0.09s  0.65% 86.29%      0.12s  0.86%  runtime.(*spanInlineMarkBits).tryAcquire
+     0.08s  0.57% 86.86%      0.08s  0.57%  sync/atomic.(*Uint64).Add (inline)
+     0.07s   0.5% 87.37%      0.07s   0.5%  time.now
+     0.05s  0.36% 87.72%      1.09s  7.82%  helixcdn/benchmarks.BenchmarkMPSCQueue
+     0.05s  0.36% 88.08%      1.23s  8.83%  helixcdn/internal/edge/backpressure.(*TokenBucket).Allow
+     0.05s  0.36% 88.44%      0.31s  2.23%  helixcdn/internal/runtime/queue.releaseNode
+     0.05s  0.36% 88.80%      0.19s  1.36%  runtime.mallocgcSmallScanNoHeader
+     0.04s  0.29% 89.09%      0.28s  2.01%  helixcdn/internal/runtime/queue.acquireNode (inline)
+     0.04s  0.29% 89.38%      2.52s 18.09%  runtime.gcDrain
+     0.04s  0.29% 89.66%      0.83s  5.96%  runtime.mapassign_fast64
+     0.04s  0.29% 89.95%      2.09s 15.00%  runtime.scanSpan
+     0.03s  0.22% 90.17%      1.60s 11.49%  helixcdn/benchmarks.BenchmarkMmapAppend
+     0.03s  0.22% 90.38%      0.62s  4.45%  helixcdn/internal/edge/session.New
+     0.03s  0.22% 90.60%      0.54s  3.88%  helixcdn/internal/runtime/packet.Get (inline)
+     0.03s  0.22% 90.81%      0.28s  2.01%  runtime.mallocgc
+     0.03s  0.22% 91.03%      0.34s  2.44%  runtime.scanObject
+     0.03s  0.22% 91.24%      0.18s  1.29%  sync/atomic.(*Pointer[go.shape.struct { helixcdn/internal/runtime/queue.value []uint8; helixcdn/internal/runtime/queue.next sync/atomic.Pointer[helixcdn/internal/runtime/queue.node] }]).Store (inline)
+     0.02s  0.14% 91.39%      0.59s  4.24%  helixcdn/internal/runtime/packet.Put (inline)
+     0.02s  0.14% 91.53%      0.10s  0.72%  internal/runtime/maps.(*table).uncheckedPutSlot
+     0.02s  0.14% 91.67%      0.17s  1.22%  internal/sync.newEntryNode[go.shape.interface {},go.shape.interface {}] (inline)
+     0.02s  0.14% 91.82%      0.13s  0.93%  runtime.(*sweepLocked).sweep
+     0.02s  0.14% 91.96%      0.14s  1.01%  sync/atomic.(*Pointer[go.shape.struct { helixcdn/internal/runtime/queue.value []uint8; helixcdn/internal/runtime/queue.next sync/atomic.Pointer[helixcdn/internal/runtime/queue.node] }]).Swap (inline)
+     0.02s  0.14% 92.10%      1.39s  9.98%  time.Now
+     0.01s 0.072% 92.18%      1.58s 11.34%  helixcdn/benchmarks.BenchmarkShardRegistry
+     0.01s 0.072% 92.25%      0.13s  0.93%  internal/runtime/maps.(*table).split
+     0.01s 0.072% 92.32%      0.07s   0.5%  internal/runtime/maps.typedmemmove
+     0.01s 0.072% 92.39%      1.61s 11.56%  internal/sync.(*HashTrieMap[go.shape.interface {},go.shape.interface {}]).Store (inline)
+     0.01s 0.072% 92.46%      0.13s  0.93%  internal/sync.(*entry[go.shape.interface {},go.shape.interface {}]).swap
+     0.01s 0.072% 92.53%      0.25s  1.79%  runtime.newobject
+     0.01s 0.072% 92.61%      0.17s  1.22%  runtime.sweepone
+     0.01s 0.072% 92.68%      0.10s  0.72%  runtime.wbBufFlush1
+         0     0% 92.68%      0.08s  0.57%  bufio.(*Writer).Flush
+         0     0% 92.68%      0.08s  0.57%  bufio.(*Writer).Write
+         0     0% 92.68%      1.13s  8.11%  helixcdn/benchmarks.BenchmarkPacketPool
+         0     0% 92.68%      1.70s 12.20%  helixcdn/benchmarks.BenchmarkRegistryAdd
+         0     0% 92.68%      1.23s  8.83%  helixcdn/benchmarks.BenchmarkTokenBucket
+         0     0% 92.68%      0.11s  0.79%  helixcdn/benchmarks.BenchmarkWalAppend
+         0     0% 92.68%      1.67s 11.99%  helixcdn/internal/edge/session.(*Registry).Add
+         0     0% 92.68%      0.26s  1.87%  helixcdn/internal/edge/session.(*Session).Touch
+         0     0% 92.68%      0.95s  6.82%  helixcdn/internal/edge/shard.(*Registry).Add
+         0     0% 92.68%      0.09s  0.65%  helixcdn/internal/storage/wal.(*Writer).Append
+         0     0% 92.68%      0.08s  0.57%  internal/poll.(*FD).Write
+         0     0% 92.68%      0.08s  0.57%  internal/poll.ignoringEINTRIO (inline)
+         0     0% 92.68%      0.15s  1.08%  internal/runtime/maps.(*table).rehash
+         0     0% 92.68%      0.11s  0.79%  internal/sync.(*HashTrieMap[go.shape.interface {},go.shape.interface {}]).expand
+         0     0% 92.68%      0.08s  0.57%  os.(*File).Write
+         0     0% 92.68%      0.08s  0.57%  os.(*File).write (inline)
+         0     0% 92.68%      0.09s  0.65%  runtime.(*mcache).nextFree
+         0     0% 92.68%      0.09s  0.65%  runtime.(*mcache).refill
+         0     0% 92.68%      0.07s   0.5%  runtime.(*wbBuf).get2 (inline)
+         0     0% 92.68%      0.11s  0.79%  runtime.bgsweep
+         0     0% 92.68%      0.12s  0.86%  runtime.efaceeq
+         0     0% 92.68%      2.53s 18.16%  runtime.gcBgMarkWorker
+         0     0% 92.68%      2.52s 18.09%  runtime.gcBgMarkWorker.func2
+         0     0% 92.68%      0.77s  5.53%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0% 92.68%      1.75s 12.56%  runtime.gcDrainMarkWorkerIdle (inline)
+         0     0% 92.68%      2.72s 19.53%  runtime.systemstack
+         0     0% 92.68%      0.10s  0.72%  runtime.wbBufFlush
+         0     0% 92.68%      0.10s  0.72%  runtime.wbBufFlush.func1
+         0     0% 92.68%      1.61s 11.56%  sync.(*Map).Store (inline)
+         0     0% 92.68%      0.87s  6.25%  sync.(*Mutex).Lock (inline)
+         0     0% 92.68%      0.20s  1.44%  sync.(*Mutex).Unlock (partial-inline)
+         0     0% 92.68%      0.12s  0.86%  sync.(*RWMutex).Unlock
+         0     0% 92.68%      0.09s  0.65%  sync/atomic.(*Pointer[go.shape.struct { internal/sync.isEntry bool }]).Store (inline)
+         0     0% 92.68%      0.16s  1.15%  syscall.RawSyscall6
+         0     0% 92.68%      0.16s  1.15%  syscall.Syscall
+         0     0% 92.68%      0.08s  0.57%  syscall.Write (inline)
+         0     0% 92.68%      0.08s  0.57%  syscall.write
+         0     0% 92.68%     11.07s 79.47%  testing.(*B).launch
+         0     0% 92.68%     11.11s 79.76%  testing.(*B).runN

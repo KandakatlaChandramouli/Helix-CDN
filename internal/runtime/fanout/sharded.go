@@ -31,9 +31,7 @@ func (s *Sharded) Dispatch(
 	key uint64,
 	payload []byte,
 ) {
-	worker := s.workers[
-		key%uint64(len(s.workers)),
-	]
+	worker := s.workers[key%uint64(len(s.workers))]
 
 	worker.Push(payload)
 }

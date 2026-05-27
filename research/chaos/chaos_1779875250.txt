@@ -1,0 +1,450 @@
+running helix benchmarks
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkFrameDecode-4     	1000000000	         0.7442 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRegistryAdd-4     	 3549072	       430.1 ns/op	     123 B/op	       3 allocs/op
+BenchmarkPacketPool-4      	81398584	        13.85 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMPSCQueue-4       	42386046	        28.29 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRingPush-4        	227652214	         5.308 ns/op	       0 B/op	       0 allocs/op
+BenchmarkShardRegistry-4   	 3493539	       380.7 ns/op	      94 B/op	       1 allocs/op
+BenchmarkMmapAppend-4      	19507639	        52.96 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTokenBucket-4     	14286069	        83.36 ns/op	       0 B/op	       0 allocs/op
+BenchmarkWalAppend-4       	  107164	     10953 ns/op	       8 B/op	       1 allocs/op
+PASS
+ok  	helixcdn/benchmarks	12.737s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/adaptive
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkAdaptive-4   	1000000000	         0.3594 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/adaptive	0.402s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/adaptivescheduler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkAdaptiveScheduler-4   	1000000000	         0.3572 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/adaptivescheduler	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/affinity
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkAffinity-4   	1000000000	         0.3862 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/affinity	0.429s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/antientropy
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkAntiEntropy-4   	1000000000	         0.3566 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/antientropy	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/chaos
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkChaos-4   	1000000000	         0.3572 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/chaos	0.400s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/checkpoint
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkCheckpoint-4   	1000000000	         0.3668 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/checkpoint	0.409s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/coalesce
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkCoalesce-4   	10109667	       104.2 ns/op	     127 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/coalesce	1.186s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/codec
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkCodec-4   	1000000000	         0.7391 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/codec	0.818s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/congestion
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkCongestion-4   	1000000000	         0.3647 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/congestion	0.406s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/controlplane
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkControlPlane-4   	1000000000	         0.3721 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/controlplane	0.415s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/cooperative
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkCooperative-4   	1000000000	         0.3644 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/cooperative	0.408s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/dataplane
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDataPlane-4   	1000000000	         0.3597 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/dataplane	0.402s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/discovery
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDiscovery-4   	1000000000	         0.3648 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/discovery	0.407s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/dispatch
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDispatch-4   	1000000000	         0.3563 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/dispatch	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/distributedstorage
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDistributedStorage-4   	1000000000	         0.3753 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/distributedstorage	0.418s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/election
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkElection-4   	1000000000	         0.3562 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/election	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/epoll
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEpoll-4   	1000000000	         0.3671 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/epoll	0.410s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/execution
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkExecution-4   	1000000000	         0.3550 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/execution	0.398s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/executor
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkExecutor-4   	1000000000	         0.3634 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/executor	0.406s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/failure
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkFailure-4   	1000000000	         0.3864 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/failure	0.443s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/gossip
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkGossip-4   	1000000000	         0.3705 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/gossip	0.414s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/latency
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLatency-4   	1000000000	         0.3695 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/latency	0.412s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/latencysim
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLatencySimulation-4   	1000000000	         0.3569 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/latencysim	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/lease
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLease-4   	1000000000	         0.3528 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/lease	0.395s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/loadshedding
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLoadShedding-4   	1000000000	         0.3707 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/loadshedding	0.414s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/lockfree
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLockFree-4   	446096134	         2.689 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/lockfree	1.478s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/logreplication
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLogReplication-4   	1000000000	         0.3765 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/logreplication	0.428s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/lsm
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkLSM-4   	1000000000	         0.3892 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/lsm	0.432s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/memory
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkAllocation-4   	1000000000	         0.3860 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/memory	0.430s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/network
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkNetwork-4   	1000000000	         0.3623 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/network	0.406s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/orchestrator
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkOrchestrator-4   	1000000000	         0.3538 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/orchestrator	0.397s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/packet
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkPacketPool-4   	85523275	        13.84 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/packet	1.204s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParser-4   	1000000000	         0.7124 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/parser	0.791s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/pipeline
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkPipeline-4   	1000000000	         0.3578 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/pipeline	0.401s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/placement
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkPlacement-4   	1000000000	         0.3644 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/placement	0.424s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/pool
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkPool-4   	31935418	        37.71 ns/op	      24 B/op	       1 allocs/op
+PASS
+ok  	helixcdn/benchmarks/pool	1.249s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/protocol
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkProtocolEncode-4   	1000000000	         0.3789 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/protocol	0.442s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/quorum
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkMajority-4   	1000000000	         0.3638 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/quorum	0.407s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/quorumruntime
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkQuorumRuntime-4   	1000000000	         0.3621 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/quorumruntime	0.405s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/reactor
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkRouter-4   	100000000	        10.58 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/reactor	1.074s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/readrepair
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReadRepair-4   	1000000000	         0.3749 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/readrepair	0.418s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/recovery
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkRecovery-4   	1000000000	         0.3578 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/recovery	0.400s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/replay
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReplay-4   	1000000000	         0.3712 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/replay	0.413s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/replication
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReplication-4   	1000000000	         0.3717 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/replication	0.415s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/ringbuffer
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkRingBuffer-4   	391646155	         3.127 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/ringbuffer	1.543s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/runtime
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkRuntime-4   	1000000000	         0.3861 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/runtime	0.446s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/scheduler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkScheduler-4   	1000000000	         0.3983 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/scheduler	0.443s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/sequence
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkSequence-4   	428184124	         2.712 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/sequence	1.451s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/serialize
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkSerialize-4   	1000000000	         0.3557 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/serialize	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/shardmap
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkShardMap-4   	19313172	        77.32 ns/op	     137 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/shardmap	1.573s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/socket
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkSocket-4   	1000000000	         0.3792 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/socket	0.422s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/speculative
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkSpeculative-4   	1000000000	         0.3621 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/speculative	0.404s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/stealing
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkStealing-4   	1000000000	         0.3595 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/stealing	0.411s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/storage
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkStorage-4   	1000000000	         0.3580 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/storage	0.401s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/striping
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkStriping-4   	1000000000	         0.3557 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/striping	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/taskgraph
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTaskGraph-4   	1000000000	         0.3560 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/taskgraph	0.399s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/telemetry
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTelemetry-4   	1000000000	         0.3771 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/telemetry	0.419s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/transport
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTransport-4   	1000000000	         0.3797 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/transport	0.427s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/vectorclock
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkVectorClock-4   	1000000000	         0.3687 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/vectorclock	0.411s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/walengine
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkWALEngine-4   	1000000000	         0.3782 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/walengine	0.421s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/workerpool
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkWorkerPool-4   	1000000000	         0.4397 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/workerpool	0.483s
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/zerocopy
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkZeroCopy-4   	1000000000	         0.4463 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/zerocopy	0.490s

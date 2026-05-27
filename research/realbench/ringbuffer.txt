@@ -1,0 +1,9 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/ringbuffer
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkRingBufferPush-4   	1000000000	         0.7888 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRingBufferPop-4    	1000000000	         0.7834 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRingBuffer-4       	385048726	         3.099 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/ringbuffer	3.264s

@@ -1,6 +1,6 @@
 package vector
 
 type Clock struct {
-	Node string
+	Node    string
 	Counter uint64
 }

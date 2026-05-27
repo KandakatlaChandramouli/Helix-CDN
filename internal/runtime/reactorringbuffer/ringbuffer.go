@@ -10,7 +10,7 @@ type Ring struct {
 func New(size uint64) *Ring {
 
 	return &Ring{
-		buf: make([][]byte, size),
+		buf:  make([][]byte, size),
 		size: size,
 	}
 }

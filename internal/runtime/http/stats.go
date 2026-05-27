@@ -24,8 +24,8 @@ func Start() error {
 
 			resp := Stats{
 				Connections: metrics.Connections.Load(),
-				Messages: metrics.Messages.Load(),
-				Broadcasts: metrics.Broadcasts.Load(),
+				Messages:    metrics.Messages.Load(),
+				Broadcasts:  metrics.Broadcasts.Load(),
 			}
 
 			_ = json.NewEncoder(w).Encode(resp)

@@ -2,5 +2,5 @@ package transport
 
 const (
 	TCP = "tcp"
-	WS = "websocket"
+	WS  = "websocket"
 )

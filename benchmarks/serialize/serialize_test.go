@@ -13,7 +13,7 @@ func BenchmarkSerialize(
 
 	p := packet.Packet{
 		Version: 1,
-		Opcode: 2,
+		Opcode:  2,
 		Payload: []byte("helix"),
 	}
 
