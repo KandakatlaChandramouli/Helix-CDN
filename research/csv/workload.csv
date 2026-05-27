@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/workload
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkBurstWorkload-4   	  101395	     13614 ns/op	   10506 B/op	       0 allocs/op
+BenchmarkSocketFanout-4    	433232920	         2.839 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/workload	3.022s
