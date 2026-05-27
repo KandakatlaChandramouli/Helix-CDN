@@ -27,9 +27,9 @@ func New() *MPSC {
 func (q *MPSC) Push(
 	payload []byte,
 ) {
-	n := &node{
-		value: payload,
-	}
+	n := acquireNode()
+
+	n.value = payload
 
 	prev := q.head.Swap(n)
 
@@ -46,6 +46,8 @@ func (q *MPSC) Pop() ([]byte, bool) {
 	value := next.value
 
 	q.tail = next
+
+	releaseNode(next)
 
 	return value, true
 }

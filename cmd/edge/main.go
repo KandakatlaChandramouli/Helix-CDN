@@ -3,19 +3,26 @@ package main
 import (
 	"log"
 
-	"helixcdn/internal/edge/server"
-	"helixcdn/internal/logging"
-	"helixcdn/internal/runtime"
+	runtimehttp "helixcdn/internal/runtime/http"
+	"helixcdn/internal/runtime/node"
+	"helixcdn/internal/runtime/shutdown"
 )
 
 func main() {
-	runtime.Tune()
+	n := node.New()
 
-	if err := logging.Init(); err != nil {
-		log.Fatal(err)
-	}
+	log.Println(
+		"helix edge booted",
+		n.ID,
+	)
 
-	if err := server.Start(); err != nil {
-		log.Fatal(err)
-	}
+	go func() {
+		if err := runtimehttp.Start(); err != nil {
+			log.Println(err)
+		}
+	}()
+
+	shutdown.Wait(func() {
+		log.Println("helix edge shutdown")
+	})
 }

@@ -1,8 +1,10 @@
 package main
 
 import (
+	"log"
 	"net"
 	"sync"
+	"time"
 )
 
 const (
@@ -29,9 +31,25 @@ func main() {
 
 			defer conn.Close()
 
-			select {}
+			for {
+				_, err := conn.Write(
+					[]byte("ping"),
+				)
+
+				if err != nil {
+					return
+				}
+
+				time.Sleep(
+					time.Second,
+				)
+			}
 		}()
 	}
+
+	log.Println(
+		"loadgen started",
+	)
 
 	wg.Wait()
 }
