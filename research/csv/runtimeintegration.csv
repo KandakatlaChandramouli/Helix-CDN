@@ -2,6 +2,6 @@ goos: linux
 goarch: amd64
 pkg: helixcdn/benchmarks/runtimeintegration
 cpu: AMD EPYC 9V74 80-Core Processor                
-BenchmarkRuntimeIntegration-4   	 3408175	       357.2 ns/op	      16 B/op	       1 allocs/op
+BenchmarkRuntimeIntegration-4   	 3976736	       343.0 ns/op	      16 B/op	       1 allocs/op
 PASS
-ok  	helixcdn/benchmarks/runtimeintegration	1.580s
+ok  	helixcdn/benchmarks/runtimeintegration	1.677s

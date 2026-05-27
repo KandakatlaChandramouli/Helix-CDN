@@ -66,7 +66,3 @@ func BenchmarkScaling16(
 ) {
 	benchmarkScaling(b, 16)
 }
-
-func ExampleScaling() {
-	fmt.Println("runtime scaling benchmark")
-}
