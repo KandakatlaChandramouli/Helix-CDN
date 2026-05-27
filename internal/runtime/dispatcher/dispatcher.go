@@ -14,10 +14,7 @@ func New() *Dispatcher {
 	n := runtime.NumCPU()
 
 	d := &Dispatcher{
-		queues: make(
-			[]*queue.MPSC,
-			n,
-		),
+		queues: make([]*queue.MPSC, n),
 	}
 
 	for i := 0; i < n; i++ {
@@ -31,6 +28,6 @@ func (d *Dispatcher) Queue(
 	core int,
 ) *queue.MPSC {
 	return d.queues[
-		core%len(d.queues)
+		core%len(d.queues),
 	]
 }

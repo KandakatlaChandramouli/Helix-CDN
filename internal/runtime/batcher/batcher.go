@@ -21,7 +21,7 @@ func New(
 	return &Batcher{
 		maxSize:  maxSize,
 		interval: interval,
-		queue: make(chan []byte, 1<<20),
+		queue:    make(chan []byte, 1<<20),
 	}
 }
 
@@ -45,6 +45,7 @@ func (b *Batcher) Run(
 
 	for {
 		select {
+
 		case msg := <-b.queue:
 			batch.Items = append(
 				batch.Items,
