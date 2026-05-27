@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	Connections = 10000
+	Connections = 500
 )
 
 func main() {

@@ -2,27 +2,51 @@ package main
 
 import (
 	"log"
+	"net"
 
-	runtimehttp "helixcdn/internal/runtime/http"
 	"helixcdn/internal/runtime/node"
-	"helixcdn/internal/runtime/shutdown"
 )
 
+func handleConnection(c net.Conn) {
+	defer c.Close()
+
+	buffer := make([]byte, 4096)
+
+	for {
+		_, err := c.Read(buffer)
+
+		if err != nil {
+			return
+		}
+	}
+}
+
 func main() {
+
 	n := node.New()
+
+	listener, err := net.Listen(
+		"tcp",
+		":9000",
+	)
+
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	log.Println(
 		"helix edge booted",
 		n.ID,
 	)
 
-	go func() {
-		if err := runtimehttp.Start(); err != nil {
-			log.Println(err)
-		}
-	}()
+	for {
 
-	shutdown.Wait(func() {
-		log.Println("helix edge shutdown")
-	})
+		conn, err := listener.Accept()
+
+		if err != nil {
+			continue
+		}
+
+		go handleConnection(conn)
+	}
 }
