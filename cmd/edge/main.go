@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"helixcdn/internal/edge/server"
 	"helixcdn/internal/logging"
 	"helixcdn/internal/runtime"
 )
@@ -14,5 +15,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println("helixcdn edge runtime booted")
+	if err := server.Start(); err != nil {
+		log.Fatal(err)
+	}
 }
