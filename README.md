@@ -1243,7 +1243,7 @@ Systems engineering is hard and humbling. Sharing the messy middle — the broke
 <br/><br/>
 
 *Built with curiosity. Broken repeatedly. Eventually made to work.*
-*— [your name here]*
+*— KandakatlaChandraMouli*
 
 <br/>
 
