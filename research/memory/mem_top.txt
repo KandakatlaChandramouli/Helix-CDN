@@ -1,0 +1,35 @@
+File: ringbuffer.test
+Build ID: 840792fe098c1794e7833a81dd87c099c80d4d3d
+Type: alloc_space
+Time: 2026-05-27 10:25:43 UTC
+Showing nodes accounting for 4528.45kB, 100% of 4528.45kB total
+      flat  flat%   sum%        cum   cum%
+ 2429.92kB 53.66% 53.66%  2429.92kB 53.66%  helixcdn/internal/core/ringbuffer.New (inline)
+ 1025.01kB 22.63% 76.29%  1025.01kB 22.63%  runtime.mallocgc
+  561.50kB 12.40% 88.69%   561.50kB 12.40%  helixcdn/internal/runtime/reactorringbuffer.New (inline)
+  512.02kB 11.31%   100%   512.02kB 11.31%  testing.(*B).ResetTimer
+         0     0%   100%   561.50kB 12.40%  helixcdn/benchmarks/ringbuffer.BenchmarkRingBuffer
+         0     0%   100%  2429.92kB 53.66%  helixcdn/benchmarks/ringbuffer.BenchmarkRingBufferSPSC
+         0     0%   100%   512.02kB 11.31%  main.main
+         0     0%   100%   512.01kB 11.31%  runtime.(*scavengerState).sleep
+         0     0%   100%   512.01kB 11.31%  runtime.(*timer).maybeAdd
+         0     0%   100%   512.01kB 11.31%  runtime.(*timer).modify
+         0     0%   100%   512.01kB 11.31%  runtime.(*timer).reset (inline)
+         0     0%   100%   512.01kB 11.31%  runtime.(*timers).addHeap
+         0     0%   100%      513kB 11.33%  runtime.allocm
+         0     0%   100%   512.01kB 11.31%  runtime.bgscavenge
+         0     0%   100%   512.01kB 11.31%  runtime.growslice
+         0     0%   100%   512.02kB 11.31%  runtime.main
+         0     0%   100%      513kB 11.33%  runtime.mstart
+         0     0%   100%      513kB 11.33%  runtime.mstart0
+         0     0%   100%      513kB 11.33%  runtime.mstart1
+         0     0%   100%      513kB 11.33%  runtime.newm
+         0     0%   100%      513kB 11.33%  runtime.newobject
+         0     0%   100%      513kB 11.33%  runtime.resetspinning
+         0     0%   100%      513kB 11.33%  runtime.schedule
+         0     0%   100%      513kB 11.33%  runtime.startm
+         0     0%   100%      513kB 11.33%  runtime.wakep
+         0     0%   100%  2991.42kB 66.06%  testing.(*B).launch
+         0     0%   100%  3503.44kB 77.37%  testing.(*B).runN
+         0     0%   100%   512.02kB 11.31%  testing.(*M).Run
+         0     0%   100%   512.02kB 11.31%  testing.runBenchmarks

@@ -1,0 +1,84 @@
+File: corequeue.test
+Build ID: d68e471e27c09479fbbc4cc48e3659e26ad2d921
+Type: cpu
+Time: 2026-05-27 10:25:30 UTC
+Duration: 3s, Total samples = 8.89s (296.39%)
+Showing nodes accounting for 8.01s, 90.10% of 8.89s total
+Dropped 115 nodes (cum <= 0.04s)
+      flat  flat%   sum%        cum   cum%
+     1.09s 12.26% 12.26%      1.45s 16.31%  runtime.tryDeferToSpanScan
+     0.87s  9.79% 22.05%      1.88s 21.15%  sync/atomic.(*Pointer[go.shape.struct { helixcdn/internal/core/mpsc.value go.shape.uint64; helixcdn/internal/core/mpsc.next sync/atomic.Pointer[helixcdn/internal/core/mpsc.node[go.shape.uint64]] }]).Swap (inline)
+     0.86s  9.67% 31.72%      1.62s 18.22%  sync/atomic.(*Pointer[go.shape.struct { helixcdn/internal/core/mpsc.value go.shape.uint64; helixcdn/internal/core/mpsc.next sync/atomic.Pointer[helixcdn/internal/core/mpsc.node[go.shape.uint64]] }]).Store (inline)
+     0.83s  9.34% 41.06%      1.01s 11.36%  sync/atomic.SwapPointer
+     0.56s  6.30% 47.36%         2s 22.50%  runtime.mallocgcSmallScanNoHeader
+     0.33s  3.71% 51.07%      1.21s 13.61%  runtime.scanObjectSmall
+     0.31s  3.49% 54.56%      6.64s 74.69%  helixcdn/internal/core/mpsc.(*Queue[go.shape.uint64]).Enqueue
+     0.30s  3.37% 57.93%      0.75s  8.44%  sync/atomic.StorePointer
+     0.25s  2.81% 60.74%      0.33s  3.71%  runtime.(*mspan).writeHeapBitsSmall
+     0.25s  2.81% 63.55%      1.52s 17.10%  runtime.scanSpan
+     0.21s  2.36% 65.92%      0.47s  5.29%  runtime.gcmarknewobject
+     0.21s  2.36% 68.28%      0.21s  2.36%  runtime.nextFreeFast (inline)
+     0.20s  2.25% 70.53%      2.77s 31.16%  runtime.mallocgc
+     0.17s  1.91% 72.44%      0.17s  1.91%  runtime.futex
+     0.15s  1.69% 74.13%      1.82s 20.47%  runtime.gcDrain
+     0.14s  1.57% 75.70%      0.14s  1.57%  runtime.(*mspan).base (inline)
+     0.14s  1.57% 77.28%      0.14s  1.57%  runtime.memclrNoHeapPointers
+     0.10s  1.12% 78.40%      0.57s  6.41%  runtime.(*wbBuf).get2 (inline)
+     0.08s   0.9% 79.30%      0.08s   0.9%  runtime.(*spanScanOwnership).or (inline)
+     0.08s   0.9% 80.20%      0.08s   0.9%  runtime.extractHeapBitsSmall
+     0.08s   0.9% 81.10%      0.08s   0.9%  runtime.procyieldAsm
+     0.08s   0.9% 82.00%      0.08s   0.9%  runtime.spanClass.sizeclass (inline)
+     0.07s  0.79% 82.79%      0.57s  6.41%  runtime.deductAssistCredit
+     0.06s  0.67% 83.46%      0.06s  0.67%  runtime.(*spanQueue).tryGetFast (inline)
+     0.06s  0.67% 84.14%      0.63s  7.09%  runtime.atomicwb
+     0.06s  0.67% 84.81%      2.83s 31.83%  runtime.newobject
+     0.06s  0.67% 85.49%      0.75s  8.44%  runtime.wbBufFlush1
+     0.05s  0.56% 86.05%      0.05s  0.56%  runtime.(*spanInlineMarkBits).release (inline)
+     0.05s  0.56% 86.61%      0.05s  0.56%  runtime.getGCMask (inline)
+     0.05s  0.56% 87.18%      0.06s  0.67%  runtime.heapArenaOf (inline)
+     0.04s  0.45% 87.63%      0.07s  0.79%  runtime.(*mspan).markBitsForIndex (inline)
+     0.04s  0.45% 88.08%      0.05s  0.56%  runtime.(*spanQueue).put
+     0.03s  0.34% 88.41%      3.69s 41.51%  helixcdn/benchmarks/corequeue.BenchmarkMPSCContention.func1
+     0.03s  0.34% 88.75%      3.02s 33.97%  helixcdn/benchmarks/corequeue.BenchmarkMPSCQueue.func1
+     0.03s  0.34% 89.09%      0.11s  1.24%  runtime.(*spanInlineMarkBits).tryAcquire
+     0.02s  0.22% 89.31%      0.12s  1.35%  runtime.(*sweepLocked).sweep
+     0.02s  0.22% 89.54%      0.50s  5.62%  runtime.gcAssistAlloc
+     0.02s  0.22% 89.76%      0.11s  1.24%  runtime.lock2
+     0.01s  0.11% 89.88%      0.24s  2.70%  runtime.(*mcache).nextFree
+     0.01s  0.11% 89.99%      0.19s  2.14%  runtime.findRunnable
+     0.01s  0.11% 90.10%      0.25s  2.81%  runtime.schedule
+         0     0% 90.10%      0.06s  0.67%  runtime.(*gcWork).tryGetSpanFast (inline)
+         0     0% 90.10%      0.22s  2.47%  runtime.(*mcache).refill
+         0     0% 90.10%      0.21s  2.36%  runtime.(*mcentral).cacheSpan
+         0     0% 90.10%      0.17s  1.91%  runtime.(*mcentral).grow
+         0     0% 90.10%      0.09s  1.01%  runtime.(*mheap).alloc
+         0     0% 90.10%      0.09s  1.01%  runtime.(*mheap).alloc.func1
+         0     0% 90.10%      0.06s  0.67%  runtime.(*mheap).allocSpan
+         0     0% 90.10%      0.08s   0.9%  runtime.(*mspan).initHeapBits
+         0     0% 90.10%      0.05s  0.56%  runtime.bgsweep
+         0     0% 90.10%      0.11s  1.24%  runtime.futexsleep
+         0     0% 90.10%      0.06s  0.67%  runtime.futexwakeup
+         0     0% 90.10%      0.37s  4.16%  runtime.gcAssistAlloc.func2
+         0     0% 90.10%      0.37s  4.16%  runtime.gcAssistAlloc1
+         0     0% 90.10%      1.82s 20.47%  runtime.gcBgMarkWorker
+         0     0% 90.10%      1.82s 20.47%  runtime.gcBgMarkWorker.func2
+         0     0% 90.10%      1.82s 20.47%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0% 90.10%      0.32s  3.60%  runtime.gcDrainN
+         0     0% 90.10%      0.09s  1.01%  runtime.gcParkAssist
+         0     0% 90.10%      0.33s  3.71%  runtime.heapSetTypeNoHeader (inline)
+         0     0% 90.10%      0.11s  1.24%  runtime.lock (partial-inline)
+         0     0% 90.10%      0.11s  1.24%  runtime.lockWithRank (inline)
+         0     0% 90.10%      0.10s  1.12%  runtime.mPark (inline)
+         0     0% 90.10%      0.26s  2.92%  runtime.mcall
+         0     0% 90.10%      0.10s  1.12%  runtime.notesleep
+         0     0% 90.10%      0.05s  0.56%  runtime.notewakeup
+         0     0% 90.10%      0.24s  2.70%  runtime.park_m
+         0     0% 90.10%      0.08s   0.9%  runtime.procyield (inline)
+         0     0% 90.10%      0.05s  0.56%  runtime.startm
+         0     0% 90.10%      0.10s  1.12%  runtime.stopm
+         0     0% 90.10%      0.07s  0.79%  runtime.sweepone
+         0     0% 90.10%      2.81s 31.61%  runtime.systemstack
+         0     0% 90.10%      0.06s  0.67%  runtime.wakep
+         0     0% 90.10%      0.75s  8.44%  runtime.wbBufFlush
+         0     0% 90.10%      0.75s  8.44%  runtime.wbBufFlush.func1
+         0     0% 90.10%      3.02s 33.97%  testing.(*B).RunParallel.func1
