@@ -1,0 +1,9 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/saturation
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkQueuePressure-4         	139447302	         8.758 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRuntimeSaturation-4     	11281894	       108.3 ns/op	      92 B/op	       0 allocs/op
+BenchmarkTailLatencyTracking-4   	 9778190	       133.3 ns/op	      40 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/saturation	4.874s
