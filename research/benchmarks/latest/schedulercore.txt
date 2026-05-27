@@ -1,0 +1,7 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/schedulercore
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkSchedulerRun-4   	 3399662	       348.4 ns/op	      39 B/op	       2 allocs/op
+PASS
+ok  	helixcdn/benchmarks/schedulercore	1.548s
