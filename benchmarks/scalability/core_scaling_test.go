@@ -1,7 +1,6 @@
 package scalability
 
 import (
-	"fmt"
 	"sync/atomic"
 	"testing"
 
