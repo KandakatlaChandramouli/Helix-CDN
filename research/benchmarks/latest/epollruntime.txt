@@ -1,0 +1,10 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/epollruntime
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEpollCreate-4   	--- FAIL: BenchmarkEpollCreate-4
+    epoll_test.go:16: too many open files
+FAIL
+exit status 1
+FAIL	helixcdn/benchmarks/epollruntime	1.609s
+FAIL

@@ -47,3 +47,7 @@ func (e *Epoll) Wait(
 		timeout,
 	)
 }
+
+func (e *Epoll) Close() error {
+	return unix.Close(e.fd)
+}

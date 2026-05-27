@@ -1,0 +1,7 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/epollruntime
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEpollCreate-4   	  346822	      3221 ns/op	       8 B/op	       1 allocs/op
+PASS
+ok  	helixcdn/benchmarks/epollruntime	1.159s

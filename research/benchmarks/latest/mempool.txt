@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/runtime
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkMemoryPool-4   	31416706	        40.34 ns/op	      24 B/op	       1 allocs/op
+BenchmarkRuntime-4      	1000000000	         0.3738 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/runtime	1.727s
