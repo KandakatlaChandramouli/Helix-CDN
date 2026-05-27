@@ -2,19 +2,26 @@ package gnetserver
 
 import (
 	"log"
+	"strconv"
 
 	"helixcdn/internal/runtime/reactorbroadcast"
 	"helixcdn/internal/runtime/reactormetrics"
+	"helixcdn/internal/runtime/reactorregistry"
 
 	"github.com/panjf2000/gnet/v2"
 )
 
 type Server struct {
 	gnet.BuiltinEventEngine
+
+	registry *reactorregistry.Registry
 }
 
 func New() *Server {
-	return &Server{}
+
+	return &Server{
+		registry: reactorregistry.New(),
+	}
 }
 
 func (s *Server) OnBoot(
@@ -35,6 +42,15 @@ func (s *Server) OnOpen(
 	gnet.Action,
 ) {
 
+	id := strconv.Itoa(
+		int(c.Fd()),
+	)
+
+	s.registry.Add(
+		id,
+		c,
+	)
+
 	reactormetrics.Connections.Add(1)
 
 	return nil, gnet.None
@@ -44,6 +60,12 @@ func (s *Server) OnClose(
 	c gnet.Conn,
 	err error,
 ) gnet.Action {
+
+	id := strconv.Itoa(
+		int(c.Fd()),
+	)
+
+	s.registry.Remove(id)
 
 	reactormetrics.Connections.Add(^uint64(0))
 
@@ -64,9 +86,17 @@ func (s *Server) OnTraffic(
 			uint64(len(buf)),
 		)
 
-		reactorbroadcast.Broadcast(
-			c,
-			buf,
+		s.registry.Range(
+			func(
+				id string,
+				conn gnet.Conn,
+			) {
+
+				reactorbroadcast.Broadcast(
+					conn,
+					buf,
+				)
+			},
 		)
 	}
 
