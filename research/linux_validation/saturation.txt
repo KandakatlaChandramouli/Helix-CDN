@@ -1,0 +1,9 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/saturation
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+BenchmarkQueuePressure-2         	48005637	        26.92 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRuntimeSaturation-2     	 5070753	       249.4 ns/op	      85 B/op	       0 allocs/op
+BenchmarkTailLatencyTracking-2   	 7201144	       158.7 ns/op	      43 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/saturation	5.077s

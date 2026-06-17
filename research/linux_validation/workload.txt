@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/workload
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+BenchmarkBurstWorkload-2   	   39614	     34312 ns/op	   11487 B/op	       0 allocs/op
+BenchmarkSocketFanout-2    	139136660	         9.386 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/workload	3.882s

@@ -1,0 +1,11 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/scalability
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+BenchmarkScaling1-2    	 6423740	       243.2 ns/op	      91 B/op	       0 allocs/op
+BenchmarkScaling2-2    	 7048914	       206.1 ns/op	      88 B/op	       0 allocs/op
+BenchmarkScaling4-2    	 6067732	       201.6 ns/op	      93 B/op	       0 allocs/op
+BenchmarkScaling8-2    	 6363412	       188.9 ns/op	      82 B/op	       0 allocs/op
+BenchmarkScaling16-2   	 6246061	       201.7 ns/op	      83 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/scalability	7.718s

@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/comparison
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+BenchmarkChannelBaseline-2     	11058901	       108.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGoroutineBaseline-2   	 3197942	       416.4 ns/op	      16 B/op	       1 allocs/op
+PASS
+ok  	helixcdn/benchmarks/comparison	3.033s

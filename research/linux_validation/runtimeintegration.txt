@@ -1,0 +1,7 @@
+goos: linux
+goarch: amd64
+pkg: helixcdn/benchmarks/runtimeintegration
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+BenchmarkRuntimeIntegration-2   	 2592880	       467.6 ns/op	      16 B/op	       1 allocs/op
+PASS
+ok  	helixcdn/benchmarks/runtimeintegration	1.691s
