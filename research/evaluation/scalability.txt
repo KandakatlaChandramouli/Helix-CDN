@@ -1,0 +1,11 @@
+goos: darwin
+goarch: arm64
+pkg: helixcdn/benchmarks/scalability
+cpu: Apple M1
+BenchmarkScaling1-8    	23952070	        51.76 ns/op	      90 B/op	       0 allocs/op
+BenchmarkScaling2-8    	26550434	        41.82 ns/op	      82 B/op	       0 allocs/op
+BenchmarkScaling4-8    	27735948	        42.92 ns/op	      81 B/op	       0 allocs/op
+BenchmarkScaling8-8    	22783042	        46.52 ns/op	      92 B/op	       0 allocs/op
+BenchmarkScaling16-8   	23101522	        51.82 ns/op	      84 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/scalability	8.550s

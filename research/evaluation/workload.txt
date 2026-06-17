@@ -1,0 +1,8 @@
+goos: darwin
+goarch: arm64
+pkg: helixcdn/benchmarks/workload
+cpu: Apple M1
+BenchmarkBurstWorkload-8   	  224714	      4794 ns/op	   11050 B/op	       0 allocs/op
+BenchmarkSocketFanout-8    	173555964	         6.911 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	helixcdn/benchmarks/workload	3.605s

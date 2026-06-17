@@ -1,0 +1,665 @@
+.
+├── all_tests.txt
+├── benchmarks
+│   ├── adaptive
+│   │   └── adaptive_test.go
+│   ├── adaptivescheduler
+│   │   └── adaptive_test.go
+│   ├── affinity
+│   │   └── affinity_test.go
+│   ├── antientropy
+│   │   └── antientropy_test.go
+│   ├── chaos
+│   │   └── chaos_test.go
+│   ├── checkpoint
+│   │   └── checkpoint_test.go
+│   ├── coalesce
+│   │   └── coalesce_test.go
+│   ├── codec
+│   │   └── codec_test.go
+│   ├── comparison
+│   │   ├── channel_baseline_test.go
+│   │   └── goroutine_baseline_test.go
+│   ├── congestion
+│   │   └── congestion_test.go
+│   ├── controlplane
+│   │   └── controlplane_test.go
+│   ├── cooperative
+│   │   └── cooperative_test.go
+│   ├── corequeue
+│   │   └── corequeue_test.go
+│   ├── dataplane
+│   │   └── dataplane_test.go
+│   ├── discovery
+│   │   └── discovery_test.go
+│   ├── dispatch
+│   │   └── dispatch_test.go
+│   ├── distributedstorage
+│   │   └── distributedstorage_test.go
+│   ├── election
+│   │   └── election_test.go
+│   ├── epoll
+│   │   └── epoll_test.go
+│   ├── epollruntime
+│   │   └── epoll_test.go
+│   ├── execution
+│   │   └── execution_test.go
+│   ├── executor
+│   │   └── executor_test.go
+│   ├── failure
+│   │   └── failure_test.go
+│   ├── frame_test.go
+│   ├── gossip
+│   │   └── gossip_test.go
+│   ├── latency
+│   │   └── latency_test.go
+│   ├── latencysim
+│   │   └── latencysim_test.go
+│   ├── lease
+│   │   └── lease_test.go
+│   ├── loadshedding
+│   │   └── loadshedding_test.go
+│   ├── lockfree
+│   │   └── lockfree_test.go
+│   ├── logreplication
+│   │   └── logreplication_test.go
+│   ├── lsm
+│   │   └── lsm_test.go
+│   ├── memory
+│   │   └── memory_test.go
+│   ├── network
+│   │   └── network_test.go
+│   ├── network_test.go
+│   ├── orchestrator
+│   │   └── orchestrator_test.go
+│   ├── packet
+│   │   └── packet_test.go
+│   ├── packet_test.go
+│   ├── parser
+│   │   └── parser_test.go
+│   ├── pipeline
+│   │   └── pipeline_test.go
+│   ├── placement
+│   │   └── placement_test.go
+│   ├── pool
+│   │   └── pool_test.go
+│   ├── protocol
+│   │   └── protocol_test.go
+│   ├── queue_test.go
+│   ├── quorum
+│   │   └── quorum_test.go
+│   ├── quorumruntime
+│   │   └── quorum_test.go
+│   ├── reactor
+│   │   ├── reactor_contention_test.go
+│   │   └── reactor_test.go
+│   ├── readrepair
+│   │   └── readrepair_test.go
+│   ├── recovery
+│   │   └── recovery_test.go
+│   ├── replay
+│   │   └── replay_test.go
+│   ├── replication
+│   │   └── replication_test.go
+│   ├── ring_test.go
+│   ├── ringbuffer
+│   │   ├── ringbuffer_contention_test.go
+│   │   └── ringbuffer_real_test.go
+│   ├── runtime
+│   │   ├── mempool_test.go
+│   │   └── runtime_test.go
+│   ├── runtimeintegration
+│   │   └── runtime_test.go
+│   ├── saturation
+│   │   ├── queue_pressure_test.go
+│   │   ├── runtime_saturation_test.go
+│   │   └── tail_latency_test.go
+│   ├── scalability
+│   │   └── core_scaling_test.go
+│   ├── scheduler
+│   │   └── scheduler_test.go
+│   ├── schedulercore
+│   │   └── scheduler_test.go
+│   ├── sequence
+│   │   └── sequence_test.go
+│   ├── serialize
+│   │   └── serialize_test.go
+│   ├── shard_registry_test.go
+│   ├── shardmap
+│   │   └── shardmap_test.go
+│   ├── socket
+│   │   └── socket_test.go
+│   ├── speculative
+│   │   └── speculative_test.go
+│   ├── stealing
+│   │   └── stealing_test.go
+│   ├── storage
+│   │   └── storage_test.go
+│   ├── storage_test.go
+│   ├── striping
+│   │   └── striping_test.go
+│   ├── taskgraph
+│   │   └── taskgraph_test.go
+│   ├── telemetry
+│   │   └── telemetry_test.go
+│   ├── token_bucket_test.go
+│   ├── transport
+│   │   └── transport_test.go
+│   ├── vectorclock
+│   │   └── vectorclock_test.go
+│   ├── wal_test.go
+│   ├── walengine
+│   │   └── walengine_test.go
+│   ├── workerpool
+│   │   └── workerpool_test.go
+│   ├── workload
+│   │   ├── burst_workload_test.go
+│   │   └── socket_fanout_test.go
+│   └── zerocopy
+│       └── zerocopy_test.go
+├── cmd
+│   ├── aggregator
+│   │   └── main.go
+│   ├── core
+│   │   └── main.go
+│   ├── edge
+│   │   └── main.go
+│   ├── loadgen
+│   │   └── main.go
+│   └── reactor
+│       └── main.go
+├── configs
+│   ├── grafana
+│   │   └── dashboards
+│   └── prometheus
+│       └── prometheus.yml
+├── deployments
+│   ├── docker
+│   │   └── Dockerfile
+│   └── kubernetes
+│       ├── base
+│       └── helix-edge.yaml
+├── docs
+│   └── paper
+│       └── benchmark_plan.md
+├── edge.log
+├── fail.log
+├── full_test.log
+├── go.mod
+├── go.sum
+├── internal
+│   ├── aggregator
+│   │   └── microbatch
+│   ├── benchmark
+│   │   ├── load
+│   │   └── profile
+│   ├── chaos
+│   │   ├── failure
+│   │   ├── jitter
+│   │   ├── latency
+│   │   ├── netem
+│   │   └── networkpartition
+│   ├── config
+│   │   └── config.go
+│   ├── congestion
+│   │   ├── adaptive
+│   │   ├── backoff
+│   │   ├── controller
+│   │   ├── fairness
+│   │   └── loadshedding
+│   ├── consensus
+│   │   └── raft
+│   ├── controlplane
+│   │   ├── election
+│   │   ├── gossip
+│   │   ├── leader
+│   │   ├── lease
+│   │   ├── membership
+│   │   ├── quorum
+│   │   ├── replication
+│   │   ├── runtime
+│   │   ├── sharding
+│   │   └── topology
+│   ├── core
+│   │   ├── cacheline
+│   │   ├── mpsc
+│   │   └── ringbuffer
+│   ├── distributed
+│   │   ├── antientropy
+│   │   ├── causal
+│   │   ├── checkpoint
+│   │   ├── commit
+│   │   ├── consistencyruntime
+│   │   ├── coordinator
+│   │   ├── failuredetector
+│   │   ├── logreplication
+│   │   ├── ownership
+│   │   ├── quorum
+│   │   ├── quorumruntime
+│   │   ├── readrepair
+│   │   ├── recovery
+│   │   ├── replayengine
+│   │   ├── replica
+│   │   ├── replication
+│   │   ├── snapshot
+│   │   ├── syncer
+│   │   ├── vectorclock
+│   │   └── walreplay
+│   ├── edge
+│   │   ├── auth
+│   │   ├── backpressure
+│   │   ├── broadcast
+│   │   ├── compression
+│   │   ├── epoll
+│   │   ├── fanout
+│   │   ├── frame
+│   │   ├── heartbeat
+│   │   ├── limiter
+│   │   ├── loadshedding
+│   │   ├── metrics
+│   │   ├── pool
+│   │   ├── protocol
+│   │   ├── qos
+│   │   ├── reconnect
+│   │   ├── replay
+│   │   ├── ring
+│   │   ├── router
+│   │   ├── server
+│   │   ├── session
+│   │   ├── shard
+│   │   ├── state
+│   │   ├── tcp
+│   │   ├── topic
+│   │   ├── websocket
+│   │   └── worker
+│   ├── errors
+│   │   └── errors.go
+│   ├── execution
+│   │   ├── dag
+│   │   ├── engine
+│   │   ├── fusion
+│   │   ├── runtime
+│   │   ├── speculative
+│   │   ├── task
+│   │   ├── taskgraph
+│   │   ├── telemetry
+│   │   ├── tracing
+│   │   └── workerpool
+│   ├── logging
+│   │   └── logger.go
+│   ├── memory
+│   │   ├── alignment
+│   │   ├── allocator
+│   │   ├── arena
+│   │   ├── cacheline
+│   │   ├── freelist
+│   │   ├── packetarena
+│   │   ├── recycler
+│   │   ├── reuse
+│   │   ├── slab
+│   │   └── zerocopy
+│   ├── mesh
+│   │   └── memberlist
+│   ├── metrics
+│   │   └── prometheus
+│   ├── network
+│   │   ├── congestion
+│   │   ├── dataplane
+│   │   ├── egress
+│   │   ├── epoll
+│   │   ├── ingress
+│   │   ├── multiplex
+│   │   ├── reactor
+│   │   ├── socket
+│   │   ├── transport
+│   │   └── zerocopy
+│   ├── orchestrator
+│   │   ├── backpressure
+│   │   ├── balancer
+│   │   ├── dispatcher
+│   │   ├── executor
+│   │   ├── loadshedding
+│   │   ├── pipeline
+│   │   ├── runtime
+│   │   ├── scheduler
+│   │   ├── telemetry
+│   │   └── worker
+│   ├── protocol
+│   │   ├── checksum
+│   │   ├── decoder
+│   │   ├── deserializer
+│   │   ├── encoder
+│   │   ├── errors
+│   │   ├── frame
+│   │   ├── header
+│   │   ├── heartbeat
+│   │   ├── opcode
+│   │   ├── packet
+│   │   ├── parser
+│   │   ├── pool
+│   │   ├── router
+│   │   ├── serializer
+│   │   ├── session
+│   │   ├── stream
+│   │   ├── transport
+│   │   ├── validate
+│   │   └── version
+│   ├── routing
+│   │   ├── fanout
+│   │   └── shard
+│   ├── runtime
+│   │   ├── ack
+│   │   ├── adaptivescheduler
+│   │   ├── affinity
+│   │   ├── allocator
+│   │   ├── anycast
+│   │   ├── auth
+│   │   ├── backpressure
+│   │   ├── batcher
+│   │   ├── batchercore
+│   │   ├── broadcast
+│   │   ├── broadcastqueue
+│   │   ├── buffer
+│   │   ├── cacheline
+│   │   ├── checkpoint
+│   │   ├── clock
+│   │   ├── coalesce
+│   │   ├── compression
+│   │   ├── connection
+│   │   ├── control
+│   │   ├── controlplane
+│   │   ├── credit
+│   │   ├── dataplane
+│   │   ├── discovery
+│   │   ├── dispatcher
+│   │   ├── egress
+│   │   ├── epoll
+│   │   ├── epollcore
+│   │   ├── eventdispatcher
+│   │   ├── eventfd
+│   │   ├── eventlog
+│   │   ├── eventloop
+│   │   ├── failover
+│   │   ├── fanout
+│   │   ├── fanoutpool
+│   │   ├── fd
+│   │   ├── fdregistry
+│   │   ├── flame
+│   │   ├── frame
+│   │   ├── freelist
+│   │   ├── fsm
+│   │   ├── gnetserver
+│   │   ├── gossip
+│   │   ├── handoff
+│   │   ├── health
+│   │   ├── heartbeat
+│   │   ├── http
+│   │   ├── ingress
+│   │   ├── latency
+│   │   ├── latencyhistogram
+│   │   ├── limiter
+│   │   ├── liveness
+│   │   ├── loadshedding
+│   │   ├── mempool
+│   │   ├── metrics
+│   │   ├── mmapqueue
+│   │   ├── mpsc
+│   │   ├── multicast
+│   │   ├── node
+│   │   ├── nonblocking
+│   │   ├── observer
+│   │   ├── opcode
+│   │   ├── ownership
+│   │   ├── p99latency
+│   │   ├── pacer
+│   │   ├── packet
+│   │   ├── pipeline
+│   │   ├── pprof
+│   │   ├── presence
+│   │   ├── protocol
+│   │   ├── pubsub
+│   │   ├── qos
+│   │   ├── queue
+│   │   ├── reactor
+│   │   ├── reactoradaptive
+│   │   ├── reactorallocator
+│   │   ├── reactorarena
+│   │   ├── reactorbackpressure
+│   │   ├── reactorbalancer
+│   │   ├── reactorbroadcast
+│   │   ├── reactorbuffer
+│   │   ├── reactorburst
+│   │   ├── reactorclock
+│   │   ├── reactorcoalesce
+│   │   ├── reactorcore
+│   │   ├── reactordispatch
+│   │   ├── reactorfanout
+│   │   ├── reactorfastregistry
+│   │   ├── reactorheartbeat
+│   │   ├── reactorlocalqueue
+│   │   ├── reactorlockfree
+│   │   ├── reactorloop
+│   │   ├── reactormetrics
+│   │   ├── reactormpsc
+│   │   ├── reactormulticast
+│   │   ├── reactorownership
+│   │   ├── reactorpacket
+│   │   ├── reactorpool
+│   │   ├── reactorqueue
+│   │   ├── reactorrebalance
+│   │   ├── reactorregistry
+│   │   ├── reactorringbuffer
+│   │   ├── reactorrouter
+│   │   ├── reactorscheduler
+│   │   ├── reactorsequence
+│   │   ├── reactorsession
+│   │   ├── reactorshard
+│   │   ├── reactorshardmap
+│   │   ├── reactorshardworker
+│   │   ├── reactorshared
+│   │   ├── reactorspsc
+│   │   ├── reactorstats
+│   │   ├── reactorstriping
+│   │   ├── reactorsubscription
+│   │   ├── reactorzerocopy
+│   │   ├── readiness
+│   │   ├── rebalance
+│   │   ├── recovery
+│   │   ├── replay
+│   │   ├── retry
+│   │   ├── reuse
+│   │   ├── ring
+│   │   ├── router
+│   │   ├── runtime.go
+│   │   ├── runtimebalance
+│   │   ├── runtimepressure
+│   │   ├── scheduler
+│   │   ├── segment
+│   │   ├── session
+│   │   ├── shard
+│   │   ├── shutdown
+│   │   ├── slab
+│   │   ├── snapshot
+│   │   ├── socket
+│   │   ├── socketruntime
+│   │   ├── spinlock
+│   │   ├── state
+│   │   ├── stats
+│   │   ├── stream
+│   │   ├── streambuffer
+│   │   ├── subscription
+│   │   ├── syscall
+│   │   ├── tasks
+│   │   ├── tcp
+│   │   ├── telemetry
+│   │   ├── token
+│   │   ├── topic
+│   │   ├── topology
+│   │   ├── transport
+│   │   ├── unsafequeue
+│   │   ├── vector
+│   │   ├── watcher
+│   │   ├── websocket
+│   │   ├── workqueue
+│   │   ├── workscheduler
+│   │   ├── workstealing
+│   │   ├── writebehind
+│   │   └── zerocopy
+│   ├── scheduler
+│   │   ├── adaptive
+│   │   ├── affinity
+│   │   ├── cooperative
+│   │   ├── numa
+│   │   ├── ownership
+│   │   ├── placement
+│   │   ├── stealing
+│   │   ├── striping
+│   │   ├── topology
+│   │   └── transfer
+│   ├── storage
+│   │   ├── checkpoint
+│   │   ├── compaction
+│   │   ├── lsm
+│   │   ├── memtable
+│   │   ├── mmap
+│   │   ├── pagecache
+│   │   ├── recovery
+│   │   ├── replay
+│   │   ├── segment
+│   │   ├── slab
+│   │   ├── sstable
+│   │   ├── wal
+│   │   └── walengine
+│   ├── telemetry
+│   │   ├── collector
+│   │   ├── histogram
+│   │   └── tracing
+│   ├── transport
+│   │   ├── grpc
+│   │   └── ws
+│   └── types
+│       └── types.go
+├── loadgen.log
+├── Makefile
+├── paper
+│   ├── benchmark_summary.md
+│   ├── environment.txt
+│   ├── evaluation
+│   ├── figures
+│   ├── literature
+│   ├── methodology
+│   ├── repository_structure.txt
+│   ├── results
+│   ├── screenshots
+│   └── tables
+├── proto
+│   └── helix.proto
+├── README.md
+├── research
+│   ├── adaptive
+│   │   ├── flame_1779874215.svg
+│   │   └── top_1779874215.txt
+│   ├── allocator
+│   │   ├── flame_1779874682.svg
+│   │   └── top_1779874682.txt
+│   ├── benchmarks
+│   │   ├── bench_1779873682.txt
+│   │   └── latest
+│   ├── chaos
+│   │   └── chaos_1779875250.txt
+│   ├── consensus
+│   │   ├── flame_1779874430.svg
+│   │   └── top_1779874430.txt
+│   ├── controlplane
+│   │   └── controlplane_1779874375.txt
+│   ├── csv
+│   │   ├── comparison.csv
+│   │   ├── runtimeintegration.csv
+│   │   ├── saturation.csv
+│   │   ├── scalability.csv
+│   │   └── workload.csv
+│   ├── distributed
+│   │   ├── distributed_1779875082.txt
+│   │   ├── flame_1779875145.svg
+│   │   └── top_1779875144.txt
+│   ├── environment
+│   │   ├── go_version.txt
+│   │   ├── hardware.txt
+│   │   └── kernel.txt
+│   ├── environment_cpu.txt
+│   ├── environment_go.txt
+│   ├── environment_kernel.txt
+│   ├── evaluation
+│   │   ├── comparison.txt
+│   │   ├── epollruntime.txt
+│   │   ├── README.md
+│   │   ├── ringbuffer.txt
+│   │   ├── runtimeintegration.txt
+│   │   ├── saturation.txt
+│   │   ├── scalability.txt
+│   │   ├── schedulercore.txt
+│   │   └── workload.txt
+│   ├── figures
+│   ├── flamegraphs
+│   │   ├── flamegraph_1779873736.svg
+│   │   ├── runtime_cpu.png
+│   │   ├── runtime_cpu.prof
+│   │   ├── saturation_cpu.png
+│   │   └── saturation_cpu.prof
+│   ├── memory
+│   │   ├── mem_top.txt
+│   │   └── memory_1779874626.txt
+│   ├── network
+│   │   ├── flame_1779874872.svg
+│   │   ├── network_1779874814.txt
+│   │   └── top_1779874872.txt
+│   ├── realbench
+│   │   ├── mpsc.txt
+│   │   └── ringbuffer.txt
+│   ├── reproducibility
+│   │   └── README.md
+│   ├── results
+│   │   └── cpu_top_1779873744.txt
+│   ├── runtime
+│   │   ├── cpu_top.txt
+│   │   ├── flame_1779874071.svg
+│   │   ├── runtime_1779874020.txt
+│   │   └── top_1779874071.txt
+│   ├── runtimecontrol
+│   │   ├── flame_1779875314.svg
+│   │   └── top_1779875314.txt
+│   ├── scheduler
+│   │   └── scheduler_1779874161.txt
+│   ├── storage
+│   │   ├── flame_1779875013.svg
+│   │   ├── storage_1779874954.txt
+│   │   └── top_1779875013.txt
+│   ├── tables
+│   └── workloads
+│       └── README.md
+├── runtimeintegration.test
+├── saturation.test
+└── scripts
+    ├── bench
+    │   └── run.sh
+    ├── evaluation
+    │   └── run_full_evaluation.sh
+    ├── flamegraph
+    │   └── run_flamegraph.sh
+    ├── k8s
+    │   └── deploy.sh
+    ├── load
+    │   ├── reactor.sh
+    │   └── runtime_load.sh
+    ├── plots
+    │   └── export_csv.sh
+    ├── profile
+    │   ├── cpu_profile.sh
+    │   ├── cpu.sh
+    │   ├── flamegraph.sh
+    │   ├── heap_profile.sh
+    │   ├── mem.sh
+    │   └── trace_runtime.sh
+    └── sysctl.sh
+
+477 directories, 186 files

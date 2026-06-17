@@ -1,0 +1,2 @@
+go version go1.26.3 darwin/arm64
+Darwin SAIs-MacBook-Air-2.local 25.0.0 Darwin Kernel Version 25.0.0: Mon Aug 25 21:17:45 PDT 2025; root:xnu-12377.1.9~3/RELEASE_ARM64_T8103 arm64
