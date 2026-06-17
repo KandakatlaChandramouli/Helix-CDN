@@ -1,0 +1,8 @@
+bin/
+dist/
+vendor/
+*.prof
+*.test
+coverage.out
+.DS_Store
+minikube-linux-amd64

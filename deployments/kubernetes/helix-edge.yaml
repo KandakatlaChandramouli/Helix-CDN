@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helix-edge
+spec:
+  replicas: 4
+
+  selector:
+    matchLabels:
+      app: helix-edge
+
+  template:
+    metadata:
+      labels:
+        app: helix-edge
+
+    spec:
+      containers:
+      - name: helix-edge
+        image: helixcdn:latest
+
+        ports:
+        - containerPort: 9000
+
+        resources:
+          limits:
+            cpu: "4"
+            memory: "4Gi"
+
+          requests:
+            cpu: "2"
+            memory: "2Gi"

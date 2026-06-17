@@ -1,0 +1,10 @@
+package controlplane
+
+import "testing"
+
+func BenchmarkControlPlane(
+	b *testing.B,
+) {
+	for i := 0; i < b.N; i++ {
+	}
+}
