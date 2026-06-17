@@ -1,0 +1,14 @@
+
+graph TD
+
+Client-->LoadBalancer
+LoadBalancer-->Reactor
+Reactor-->Scheduler
+Scheduler-->WorkerPool
+WorkerPool-->Batcher
+Batcher-->SocketRuntime
+SocketRuntime-->Storage
+
+Storage-->WAL
+Storage-->PageCache
+Storage-->MMAP

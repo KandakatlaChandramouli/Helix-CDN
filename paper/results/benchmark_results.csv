@@ -1,0 +1,14 @@
+Benchmark,ns_per_op
+Runtime Integration,467.6
+Channel Baseline,108.3
+Goroutine Baseline,424.9
+Queue Pressure,24.44
+Runtime Saturation,234.9
+Tail Latency Tracking,269.7
+Scaling-1,243.2
+Scaling-2,206.1
+Scaling-4,201.6
+Scaling-8,188.9
+Scaling-16,201.7
+Socket Fanout,7.952
+Burst Workload,26512.0
